@@ -1,14 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>wdd231</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristian G.S. Miranda</title>
+    <meta name="description" content="Course Home Page">
+    <meta name="author" content="Cristian Miranda">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/index.js" defer></script>
 </head>
 <body>
-    <h1>wdd 231 - Miranda</h1>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <img src="images/profile.jpg" alt="Logo" width="100">
+                <h1>Cristian G.S. Miranda</h1>
+            </div>
+            <button id="menu" class="menu-button">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+            <nav class="navigation-home">
+                <div class="box">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="box">
+                    <a href="Chamber.html">Chamber</a>
+                </div>
+                <div class="box">
+                    <a href="https://github.com/cristiangsmiranda">GitHub Profile</a>
+                </div>
+                <div class="box">
+                    <a href="https://www.linkedin.com/in/cristian-gabriel-miranda-/">LinkedIn</a>
+                </div>
+            </nav>
+        </header>
+        <main class="main-container">
+            <aside class="card">
+                <h2 class="resources">Course Work</h2>
+                <ul class="course-work-list">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </aside>
+            <section class="card">
+                <h2 class="city">Salvador-BA, Brazil</h2>
+                <div class="city-container">
+                    <img src="images/salvador.jpg" alt="Salvador-BA" width="300">
+                    <p class="caption">Lacerda elevator and Mercado Modelo</p>
+                </div>
+            </section>
+            <section class="card">
+                    <h2 class="navigation">Web and Computer Programming Certificate</h2>
+                    <div class="filter-buttons">
+                        <button class="btn-filter" id="all">All</button>
+                        <button class="btn-filter" id="cse">CSE</button>
+                        <button class="btn-filter" id="wdd">WDD</button>
+                    </div>
+                    <div class="courses">
+                        <div class="course" id="course-110" data-category="cse">CSE 110</div>
+                        <div class="course" id="course-130" data-category="wdd">WDD 130</div>
+                        <div class="course" id="course-111" data-category="cse">CSE 111</div>
+                        <div class="course" id="course-210" data-category="cse">CSE 210</div>
+                        <div class="course" id="course-131" data-category="wdd">WDD 131</div>
+                        <div class="course" id="course-231" data-category="wdd">WDD 231</div>
+                    </div>
+                    <!-- Local onde as informações do curso serão exibidas -->
+                    <div id="course-details"></div>
+            </section>
+            <section class="card total-credits" id="total-credits-section">
+                <h3>Total Credits Completed: <span id="total-credits"></span></h3>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; <span id="currentyear"></span></p>
+            <p>🌊 Cristian G.S. Miranda 🌊</p>
+            <p>Salvador, Brazil.</p>
+            <p id="lastModified"></p>
+        </footer>
+    </div>
 </body>
 </html>
