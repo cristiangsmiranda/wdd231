@@ -111,6 +111,13 @@ document.querySelectorAll('.course').forEach(courseDiv => {
     });
 });
 
+document.querySelectorAll('.navigation-home a').forEach(link => {
+    // Verifica se o href do link é igual ao URL da página atual
+    if (link.href === window.location.href) {
+        link.classList.add('active'); // Adiciona a classe active ao link correspondente
+    }
+});
+
 // Seletor do container de cursos
 const coursesContainer = document.querySelector('.courses');
 // Função para renderizar os cursos com base na categoria
@@ -131,6 +138,8 @@ function renderFilteredCourses(category) {
         courseDiv.textContent = `${course.subject} ${course.number} - ${course.title}`;
         if (course.completed) {
             courseDiv.classList.add('completed');
+        } else {
+            courseDiv.classList.add('not-completed'); // Adiciona uma classe para cursos não completos
         }
         // Insere no container de cursos
         coursesContainer.appendChild(courseDiv);
@@ -150,7 +159,6 @@ document.querySelectorAll('.btn-filter').forEach(button => {
 // Renderiza todos os cursos por padrão ao carregar a página
 renderFilteredCourses('all');
 
-
 function calculateTotalCredits() {
     const totalCredits = courses.reduce((accumulator, course) => {
         // Se o curso estiver completo, soma os créditos
@@ -161,21 +169,6 @@ function calculateTotalCredits() {
 }
 // Chama a função para calcular e exibir os créditos ao carregar a página
 calculateTotalCredits();
-
-
-const hamButton = document.querySelector("#menu");
-const navigation = document.querySelector("nav.navigation-home");
-hamButton.addEventListener("click", () => {
-    navigation.classList.toggle("open");
-    hamButton.classList.toggle("open");
-    if (navigation.classList.contains("open")) {
-        const firstLink = navigation.querySelector("a");
-        if (firstLink) {
-            firstLink.focus();
-        }
-    }
-});
-
 
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = "Last Update: " + document.lastModified;

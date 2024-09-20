@@ -9,33 +9,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/index.css" media="print" onload="this.media='all'">
     <script src="scripts/index.js" defer></script>
 </head>
 <body>
     <div class="container">
         <header>
             <div class="header-left">
-                <img src="images/profile.jpg" alt="Logo" width="100">
+                <img src="images/profile.webp" alt="Logo" width="80" loading="lazy">
                 <h1>Cristian G.S. Miranda</h1>
             </div>
-            <button id="menu" class="menu-button">
+            <button id="menu" class="menu-button" aria-expanded="false" aria-controls="navigation" aria-label="Toggle navigation">
                 <span class="menu-icon"></span>
                 <span class="menu-icon"></span>
                 <span class="menu-icon"></span>
             </button>
-            <nav class="navigation-home">
+            <nav class="navigation-home" id="navigation" role="navigation" aria-hidden="true">
                 <div class="box">
-                    <a href="index.html">Home</a>
+                    <a href="index.html" tabindex="0">Home</a>
                 </div>
                 <div class="box">
-                    <a href="Chamber.html">Chamber</a>
+                    <a href="Chamber.html" tabindex="0">Chamber</a>
                 </div>
                 <div class="box">
-                    <a href="https://github.com/cristiangsmiranda">GitHub Profile</a>
+                    <a href="https://github.com/cristiangsmiranda" tabindex="0">GitHub Profile</a>
                 </div>
                 <div class="box">
-                    <a href="https://www.linkedin.com/in/cristian-gabriel-miranda-/">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/cristian-gabriel-miranda-/" tabindex="0">LinkedIn</a>
                 </div>
             </nav>
         </header>
@@ -51,27 +51,29 @@
             <section class="card">
                 <h2 class="city">Salvador-BA, Brazil</h2>
                 <div class="city-container">
-                    <img src="images/salvador.jpg" alt="Salvador-BA" width="300">
+                    <img src="images/salvador.webp" alt="Salvador-BA" width="220" loading="lazy">
                     <p class="caption">Lacerda elevator and Mercado Modelo</p>
                 </div>
             </section>
             <section class="card">
-                    <h2 class="navigation">Web and Computer Programming Certificate</h2>
-                    <div class="filter-buttons">
-                        <button class="btn-filter" id="all">All</button>
-                        <button class="btn-filter" id="cse">CSE</button>
-                        <button class="btn-filter" id="wdd">WDD</button>
-                    </div>
-                    <div class="courses">
-                        <div class="course" id="course-110" data-category="cse">CSE 110</div>
-                        <div class="course" id="course-130" data-category="wdd">WDD 130</div>
-                        <div class="course" id="course-111" data-category="cse">CSE 111</div>
-                        <div class="course" id="course-210" data-category="cse">CSE 210</div>
-                        <div class="course" id="course-131" data-category="wdd">WDD 131</div>
-                        <div class="course" id="course-231" data-category="wdd">WDD 231</div>
-                    </div>
-                    <!-- Local onde as informações do curso serão exibidas -->
-                    <div id="course-details"></div>
+                <h2 class="navigation">Web and Computer Programming Certificate</h2>
+                <div class="filter-buttons">
+                    <button class="btn-filter" id="all">All</button>
+                    <button class="btn-filter" id="cse">CSE</button>
+                    <button class="btn-filter" id="wdd">WDD</button>
+                </div>
+                <div class="courses" role="grid">
+                    <div class="course" id="course-110" data-category="cse" role="gridcell">CSE 110</div>
+                    <div class="course" id="course-130" data-category="wdd" role="gridcell">WDD 130</div>
+                    <div class="course" id="course-111" data-category="cse" role="gridcell">CSE 111</div>
+                    <div class="course" id="course-210" data-category="cse" role="gridcell">CSE 210</div>
+                    <div class="course" id="course-131" data-category="wdd" role="gridcell">WDD 131</div>
+                    <div class="course" id="course-231" data-category="wdd" role="gridcell">WDD 231</div>
+                </div>
+                <div id="course-details" role="dialog" aria-labelledby="course-details-title" aria-modal="true">
+                    <h2 id="course-details-title">Course Details</h2>
+                    <button id="close-dialog" aria-label="close-dialog">X</button>
+                </div>
             </section>
             <section class="card total-credits" id="total-credits-section">
                 <h3>Total Credits Completed: <span id="total-credits"></span></h3>
@@ -84,5 +86,20 @@
             <p id="lastModified"></p>
         </footer>
     </div>
+
+    <script>
+        const hamButton = document.querySelector("#menu");
+        const navigation = document.querySelector("nav.navigation-home");
+        hamButton.addEventListener("click", () => {
+            const expanded = hamButton.getAttribute("aria-expanded") === "true";
+            hamButton.setAttribute("aria-expanded", !expanded);
+            navigation.setAttribute("aria-hidden", expanded);
+            navigation.classList.toggle("open");
+            if (!expanded) {
+                const firstLink = navigation.querySelector("a");
+                if (firstLink) firstLink.focus();
+            }
+        });
+    </script>
 </body>
 </html>
