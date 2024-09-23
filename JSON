@@ -1,0 +1,23 @@
+{
+  "family_name": "Miranda",
+  "move_in_date": "2023-08-01",
+  "number_of_people": 3,
+  "visited_by_bishopric": true,
+  "family_members": [
+    {
+      "name": "Cristian Miranda",
+      "gender": "Male",
+      "birthdate": "2000-05-27"
+    },
+    {
+      "name": "Hévila Miranda",
+      "gender": "Female",
+      "birthdate": "1998-11-22"
+    },
+    {
+      "name": "Mariah Miranda",
+      "gender": "Female",
+      "birthdate": "2023-12-05"
+    }
+  ]
+}
