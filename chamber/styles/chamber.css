@@ -3,8 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #F0F4C3; /* Fundo claro com tonalidade verde/areia */
-    color: #00241e; /* Texto em tom escuro que remete ao verde das florestas */
+    background-color: #F0F4C3;
 }
 
 .container {
@@ -17,7 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FFCC80; /* Tom laranja quente, lembrando o pôr do sol */
+    background-color: #FFCC80;
     padding: 10px 20px;
     position: relative;
 }
@@ -58,7 +57,7 @@ header {
 .navigation-home.open {
     display: flex;
     flex-direction: column;
-    background-color: #FFAB91; /* Fundo laranja suave */
+    background-color: #FFAB91;
     width: 100%;
     padding: 10px 0;
     position: absolute;
@@ -70,7 +69,7 @@ header {
 
 .navigation-home a {
     text-decoration: none;
-    color: #002922; /* Tom verde escuro */
+    color: #002922;
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -78,6 +77,13 @@ header {
 
 .navigation-home a:hover {
     background-color: #ffffff;
+}
+
+.navigation-home a.active {
+    background-color: #f5f5f5;
+    color: #000000;
+    font-weight: bold;
+    border-bottom: 2px solid #002922;
 }
 
 .menu-button {
@@ -96,8 +102,7 @@ header {
 .menu-icon {
     width: 35px;
     height: 4px;
-    background-color: #002c24; /* Verde escuro */
-    margin: 3px 0;
+    background-color: #002c24;
     transition: all 0.3s;
 }
 
@@ -154,7 +159,7 @@ h2 {
 }
 
 .card {
-    background-color: #FFE0B2; /* Fundo laranja pastel */
+    background-color: #FFE0B2;
     border: 1px solid #FFAB91;
     border-radius: 8px;
     padding: 0;
@@ -168,8 +173,8 @@ h2 {
 }
 
 .card-header {
-    background-color: #c773599a; /* Cabeçalho em laranja vibrante */
-    color: #00201a; /* Texto verde escuro */
+    background-color: #c773599a;
+    color: #00201a;
     font-weight: bold;
     padding: 10px;
     border-top-left-radius: 8px;
@@ -232,7 +237,7 @@ ul li {
 .member-card {
     display: flex;
     flex-direction: column;
-    border: 1px solid #FFCC80; /* Borda em laranja claro */
+    border: 1px solid #FFCC80;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
@@ -251,7 +256,7 @@ ul li {
 }
 
 .member-header {
-    background-color: #FFEB3B; /* Amarelo vibrante */
+    background-color: #FFEB3B;
     text-align: center;
     padding: 10px;
 }
@@ -270,9 +275,9 @@ ul li {
 }
 
 .additional-info {
-    margin-top: 10px; /* Espaço entre informações adicionais e principais */
-    padding-top: 10px; /* Espaço acima das informações adicionais */
-    border-top: 1px solid #FFCC80; /* Linha de separação em tom claro */
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #FFCC80;
 }
 
 .member-card img {
