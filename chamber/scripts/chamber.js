@@ -143,9 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (currentPath.startsWith('/')) {
       currentPath = currentPath.substring(1);
   }
-
   const navLinks = document.querySelectorAll('.navigation-home a');
-
   navLinks.forEach(link => {
       if (currentPath.endsWith(link.getAttribute('href'))) {
           link.classList.add('active');
