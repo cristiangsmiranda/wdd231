@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "name": "Laura Ferreira Lima",
+      "address": "123 Main St",
+      "phone": "555-1234",
+      "website": "https://company1.com",
+      "image": "company1.png",
+      "membershipLevel": 1,
+      "info": "Member since 2015"
+    },
+    {
+      "id": 2,
+      "name": "Gabriela Costa Almeida",
+      "address": "456 Elm St",
+      "phone": "555-5678",
+      "website": "https://company2.com",
+      "image": "company2.png",
+      "membershipLevel": 2,
+      "info": "Member since 2018"
+    },
+    {
+      "id": 3,
+      "name": "Rafael Mendes Souza",
+      "address": "789 Oak St",
+      "phone": "555-9012",
+      "website": "https://company3.com",
+      "image": "company3.png",
+      "membershipLevel": 3,
+      "info": "Member since 2020"
+    },
+    {
+      "id": 4,
+      "name": "Fernando Santos Lima",
+      "address": "101 Pine St",
+      "phone": "555-3456",
+      "website": "https://company4.com",
+      "image": "company4.png",
+      "membershipLevel": 1,
+      "info": "Member since 2017"
+    },
+    {
+      "id": 5,
+      "name": "Lucas Almeida Pereira",
+      "address": "202 Cedar St",
+      "phone": "555-7890",
+      "website": "https://company5.com",
+      "image": "company5.png",
+      "membershipLevel": 2,
+      "info": "Member since 2019"
+    },
+    {
+      "id": 6,
+      "name": "Thiago Martins Rocha",
+      "address": "303 Maple St",
+      "phone": "555-2345",
+      "website": "https://company6.com",
+      "image": "company6.png",
+      "membershipLevel": 3,
+      "info": "Member since 2021"
+    },
+    {
+      "id": 7,
+      "name": "Mariana Oliveira Santos",
+      "address": "404 Birch St",
+      "phone": "555-6789",
+      "website": "https://company7.com",
+      "image": "company7.png",
+      "membershipLevel": 1,
+      "info": "Member since 2016"
+    }
+  ]
+  

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber</title>
+    <title>Salvador Chamber of Commerce</title>
     <meta name="description" content="Chamber page">
     <meta name="author" content="Cristian Miranda">
-    <meta property="og:title" content="Chamber">
+    <meta property="og:title" content="A course page about a Chamber of commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://cristiangsmiranda.github.io/wdd231/images/profile.webp">
     <meta property="og:url" content="https://cristiangsmiranda.github.io/wdd231/chamber.html">
@@ -18,5 +18,112 @@
     <script src="scripts/chamber.js" defer></script>
     <link rel="icon" href="favicon.ico">
 </head>
-
-
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <img src="images/logo-salvador.webp" alt="Logo" width="80" loading="lazy">
+                <div>
+                    <h1>Salvador</h1>
+                    <h1>chamber of commerce</h1>
+                </div>
+            </div>
+            <button id="menu" class="menu-button" aria-expanded="false" aria-controls="navigation" aria-label="Toggle navigation">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+            <nav class="navigation-home" id="navigation" role="navigation" aria-hidden="true">
+                <div class="box">
+                    <a href="Home.html" tabindex="0">Home</a>
+                </div>
+                <div class="box">
+                    <a href="directory.html" tabindex="0">Directory</a>
+                </div>
+                <div class="box">
+                    <a href="https://github.com/cristiangsmiranda" tabindex="0">Join</a>
+                </div>
+                <div class="box">
+                    <a href="https://www.linkedin.com/in/cristian-gabriel-miranda-/" tabindex="0">Discover</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="home-hero">
+                <img src="images/Salvador-chamber-of-commerce.webp" alt="Welcome" width="1200" loading="lazy">
+                <button id="keynote">Keynote Tickets</button>
+                <div class="keynote-container grid-view"></div>
+            </section>
+            <h2>Home</h2>
+            <div class="cards-container">
+                <aside class="card">
+                    <div class="card-header">Events</div>
+                    <ul class="event-list"></ul>
+                </aside>
+                <section class="data card">
+                    <div class="card-header">Current Weather</div>
+                    <div class="weather-content">
+                      <ul>
+                        <li>Temperature: <span id="current-temp">Loading...</span></li>
+                        <li>Condition: <span id="current-description">Loading...</span></li>
+                        <li id="high-temp">High: Loading...</li>
+                        <li id="low-temp">Low: Loading...</li>
+                        <li id="humidity">Humidity: Loading...</li>
+                        <li id="sunrise">Sunrise: Loading...</li>
+                        <li id="sunset">Sunset: Loading...</li>
+                      </ul>
+                      <img class="weather-icon" src="images/weather-svg.svg" alt="Weather Icon" width="100"/>
+                    </div>
+                  </section>
+                <section class="weather card">
+                    <div class="card-header">Weather Forecast</div>
+                    <ul>
+                        <li><strong>Today:</strong> <span id="today-temp">Loading...</span>°C</li>
+                        <li><strong>Tomorrow:</strong> <span id="tomorrow-temp">Loading...</span>°C</li>
+                        <li><strong>Day After Tomorrow:</strong> <span id="day-after-temp">Loading...</span>°C</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="members-container grid-view"></div>
+            <button id="toggleView">Toggle View</button>
+        </main>
+        <footer>
+            <section class="information">
+                <p>Salvador - chamber of commerce</p>
+                <p>Address: R. da Belgica, Salvador, BA, Brazil</p>
+                <p>Phone: +55 (12) 34567-8910</p>
+                <p>Email: SalvadorCofC@email.com</p>   
+            </section>
+            <nav class="sociallinks">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.webp" alt="Facebook">
+                </a>
+                <a href="https://www.linkedin.com/in/cristian-gabriel-miranda-/">
+                    <img src="images/linkedin.webp" alt="Linkedin">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram.webp" alt="Instagram">
+                </a>
+            </nav>
+            <section class="footer">
+                <p>WDD231 Class Project</p>
+                <p>Cristian G.S. Miranda</p>
+                <p>&copy; <span id="currentyear"></span> Salvador - chamber of commerce</p>
+                <p id="lastModified"></p>
+            </section>
+        </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuButton = document.getElementById("menu");
+                const navigation = document.getElementById("navigation");
+                menuButton.addEventListener("click", function () {
+                    const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+                    menuButton.setAttribute("aria-expanded", !isExpanded);
+                    menuButton.classList.toggle("active");
+                    navigation.classList.toggle("open");
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>
