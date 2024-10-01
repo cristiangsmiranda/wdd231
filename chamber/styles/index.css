@@ -149,30 +149,30 @@ header {
 }
 
 .call-to-action form {
-    max-width: 400px; /* Limite a largura do formulário */
-    margin: 0 auto; /* Centraliza o formulário */
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .call-to-action input[type="text"],
 .call-to-action input[type="email"],
 .call-to-action input[type="submit"] {
     padding: 10px;
-    margin: 10px 0; /* Margem vertical para espaçamento */
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%; /* Ajusta a largura para 100% do formulário */
-    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .call-to-action input[type="submit"] {
-    background-color: #333; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    border: none; /* Remove a borda padrão */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
 .call-to-action input[type="submit"]:hover {
-    background-color: #555; /* Cor de fundo ao passar o mouse */
+    background-color: #555;
 }
 
 .contact-us {
@@ -205,7 +205,7 @@ header {
     border: 1px solid #FFAB91;
     border-radius: 8px;
     padding: 0;
-    width: 48%; /* Ajusta a largura para permitir espaçamento */
+    width: 48%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
 }
@@ -272,9 +272,9 @@ ul li {
 
 
 .members-container {
-    display: flex; /* Usar flexbox para os cards */
-    flex-wrap: wrap; /* Permitir que os cards quebrem linha */
-    justify-content: center; /* Espaçamento entre os cards */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .member-card {
@@ -284,11 +284,11 @@ ul li {
      border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-    width: calc(30% - 20px); /* 3 cards lado a lado com espaçamento */
-    margin: 25px; /* Espaçamento entre os cards */
+    width: calc(30% - 20px);
+    margin: 25px;
     padding: 10px;
     align-items: center;
-    background-color: #FFE0B2; /* Fundo branco para os cards */
+    background-color: #FFE0B2;
 }
 
 .member-card:hover {
@@ -378,18 +378,18 @@ footer img {
     }
 
     .card {
-        width: 100%; /* Ajusta a largura para 100% */
-        margin: 10px 0; /* Adiciona a margem de 10px */
+        width: 100%;
+        margin: 10px 0;
     }
 
     .member-card {
-        width: 100%; /* Ajusta a largura para 100% */
-        margin: 10px 0; /* Adiciona a margem de 10px */
+        width: 100%;
+        margin: 10px 0;
     }
 
     .member-content {
-        flex-direction: column; /* Alinha os itens verticalmente */
-        align-items: center; /* Centraliza os itens */
+        flex-direction: column;
+        align-items: center;
     }
 
     footer {
