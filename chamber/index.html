@@ -15,10 +15,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="preload" href="images/Salvador-chamber-of-commerce.webp" as="image">
-    <link rel="preload" href="styles/chamber.css" as="style">
-    <link rel="stylesheet" href="styles/chamber.css" media="print" onload="this.media='all'">
-    <link rel="preload" href="scripts/chamber.js" as="script">
-    <script src="scripts/chamber.js" defer></script>
+    <link rel="preload" href="styles/index.css" as="style">
+    <link rel="stylesheet" href="styles/index.css" media="print" onload="this.media='all'">
+    <link rel="preload" href="scripts/index.js" as="script">
+    <script src="scripts/index.js" defer></script>
     <link rel="icon" href="favicon.ico">
 </head>
 <body>
@@ -53,12 +53,71 @@
         </header>
         <main>
             <section class="home-hero">
-                <img src="images/Salvador-chamber-of-commerce.webp" alt="Welcome" width="1200" loading="lazy">
-                <button id="keynote">Keynote Tickets</button>
-                <div class="keynote-container grid-view"></div>
+                <img src="images/Salvador-chamber-of-commerce.webp" alt="Welcome" width="1200" loading="lazy" class="hero-image"/>
+                <h2 class="home-hero-message">Welcome to the Salvador Chamber of Commerce</h2>
+                    <a href="link-para-juntar-se.html" class="cta-button"></a>
+                <section class="call-to-action">
+                    <h2>Join the Chamber of Commerce</h2>
+                    <form>
+                        <input type="text" name="name" placeholder="Your Name"><br>
+                        <input type="email" name="email" placeholder="Your Email"><br>
+                        <input type="submit" value="Join">
+                    </form>
+                </section>
+                <section class="contact-us">
+                    <h2>Contact Us for an Unforgettable Experience</h2>
+                    <a href="join.html">View Our contact</a>
+                </section>
             </section>
-
-            
+            <div class="cards-container">
+                <aside class="card">
+                    <div class="card-header">Events</div>
+                    <ul class="event-list">
+                        <li>Palestra com Makoto Shinkai - 31 de fevereiro</li>
+                        <li>Reunião de confraternização - 01 de abril</li>
+                        <li>Viagem para as praias de Asgard</li>
+                    </ul>
+                </aside>
+                <section class="spotlights card">
+                    <div class="card-header">Spotlights</div>
+                    <ul>
+                        <li>
+                            <h3>Empresa de Tecnologia Local</h3>
+                            <p>Inovando soluções digitais, esta empresa oferece serviços de desenvolvimento de software e consultoria para negócios locais.</p>
+                        </li>
+                        <li>
+                            <h3>Empresa de Turismo</h3>
+                            <p>Especializada em experiências únicas, esta empresa proporciona roteiros personalizados para explorar as belezas de Salvador e arredores.</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="weather-container">
+                <section class="data card">
+                    <div class="card-header">Current Weather</div>
+                    <div class="weather-content">
+                        <ul>
+                            <li>Temperature: <span id="current-temp">Loading...</span></li>
+                            <li>Condition: <span id="current-description">Loading...</span></li>
+                            <li id="high-temp">High: Loading...</li>
+                            <li id="low-temp">Low: Loading...</li>
+                            <li id="humidity">Humidity: Loading...</li>
+                            <li id="sunrise">Sunrise: Loading...</li>
+                            <li id="sunset">Sunset: Loading...</li>
+                        </ul>
+                        <img class="weather-icon" src="images/weather-svg.svg" alt="Weather Icon" width="100"/>
+                    </div>
+                </section>
+                <section class="weather card">
+                    <div class="card-header">Weather Forecast</div>
+                    <ul>
+                        <li><strong>Today:</strong> <span id="today-temp">Loading...</span>°C</li>
+                        <li><strong>Tomorrow:</strong> <span id="tomorrow-temp">Loading...</span>°C</li>
+                        <li><strong>Day After Tomorrow:</strong> <span id="day-after-temp">Loading...</span>°C</li>
+                    </ul>
+                </section>
+            </div>
+            <div id="members-cards" class="members-container"></div>
         </main>
         <footer>
             <section class="information">
