@@ -30,7 +30,7 @@
                     <a href="index.html" tabindex="0">Home</a>
                 </div>
                 <div class="box">
-                    <a href="Chamber.html" tabindex="0">Chamber</a>
+                    <a href="Chamber/index.html" tabindex="0">Chamber</a>
                 </div>
                 <div class="box">
                     <a href="https://github.com/cristiangsmiranda" tabindex="0">GitHub Profile</a>
@@ -73,10 +73,11 @@
                         <div class="course" id="course-231" data-category="wdd" role="gridcell">WDD 231</div>
                     </div>
                 </div>
-                <div id="course-details" role="dialog" aria-labelledby="course-details-title" aria-modal="true">
-                    <h2 id="course-details-title">Course Details</h2>
-                    <button id="close-dialog" aria-label="close-dialog">X</button>
-                </div>
+                <dialog id="course-details" role="dialog" aria-labelledby="course-details-title" aria-modal="true">
+                    <div id="dialog-content"></div>
+                    <button id="closeModal" aria-label="close-dialog">❌</button>
+                    
+                </dialog>                
             </section>
             <section class="card total-credits" id="total-credits-section">
                 <h3>Total Credits Completed: <span id="total-credits"></span></h3>

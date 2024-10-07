@@ -215,6 +215,52 @@ nav a.active {
     border-radius: 8px;
     width: 50%;
 }
+
+dialog {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+    margin: auto; /* Centraliza o diálogo */
+    top: 50%; /* Posiciona a parte superior do diálogo no meio da tela */
+    left: 50%; /* Posiciona a parte esquerda do diálogo no meio da tela */
+    transform: translate(-50%, -50%); /* Move o diálogo para o centro */
+}
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+dialog[open] {
+    display: block; /* Mostra quando aberto */
+}
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.dialog-header {
+    background-color: #366594; /* Cor azul */
+    color: white; /* Cor do texto */
+    padding: 10px;
+    display: flex; /* Usar flexbox */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center; /* Alinhar verticalmente ao centro */
+    border-radius: 4px 4px 0 0; /* Arredondar o topo */
+  }
+  .dialog-header button {
+    background: transparent; /* Fundo transparente */
+    border: none; /* Sem borda */
+    color: white; /* Cor do texto */
+    cursor: pointer; /* Cursor em forma de mão */
+    font-size: 1.2rem; /* Tamanho do botão */
+    line-height: 1; /* Remove espaçamento vertical */
+    margin-left: 10px; /* Um pequeno espaço à esquerda */
+  }
+
 footer {
     background-color: #3450b37a;
     color: rgb(0, 0, 0);

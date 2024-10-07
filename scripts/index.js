@@ -82,34 +82,51 @@ const courses = [
 const courseDetails = document.getElementById('course-details');
 // Função para renderizar os detalhes de um curso
 function displayCourseDetails(course) {
-    // Limpa o conteúdo anterior
     courseDetails.innerHTML = '';
-    // Cria o HTML com os detalhes do curso
-    const detailsHTML = `
-        <h2>${course.title}</h2>
-        <p><strong>Subject:</strong> ${course.subject}</p>
-        <p><strong>Number:</strong> ${course.number}</p>
-        <p><strong>Credits:</strong> ${course.credits}</p>
-        <p><strong>Certificate:</strong> ${course.certificate}</p>
-        <p><strong>Description:</strong> ${course.description}</p>
-        <p><strong>Technologies:</strong> ${course.technology.join(', ')}</p>
-        <p><strong>Completed:</strong> ${course.completed ? 'Yes' : 'No'}</p>
+    courseDetails.innerHTML = `
+      <div class="dialog-header">
+        <h2>${course.subject} ${course.number}</h2>
+        <button id="closeModal">❌</button>
+      </div>
+      <h3>${course.title}</h3>
+      <p><strong>Credits</strong>: ${course.credits}</p>
+      <p><strong>Certificate</strong>: ${course.certificate}</p>
+      <p>${course.description}</p>
+      <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
     `;
-    // Insere o HTML no container de detalhes
-    courseDetails.innerHTML = detailsHTML;
+    courseDetails.showModal();
+
+    const closeModal = document.getElementById("closeModal");
+    closeModal.addEventListener("click", () => {
+        console.log("Fechando o modal...");
+        courseDetails.close();
+        // Limpa o conteúdo após fechar
+        courseDetails.innerHTML = '';
+    });
+
+    courseDetails.addEventListener("click", (event) => {
+        if (event.target === courseDetails) {
+            console.log("Clicou fora do modal, fechando...");
+            courseDetails.close();
+            // Limpa o conteúdo após fechar
+            courseDetails.innerHTML = '';
+        }
+    });
 }
+
+// Adiciona evento de clique aos cursos
+document.querySelectorAll('.course').forEach(courseDiv => {
+    courseDiv.addEventListener('click', () => {
+        const courseNumber = parseInt(courseDiv.id.split('-')[1]);
+        const course = findCourseByNumber(courseNumber);
+        displayCourseDetails(course);
+    });
+});
+
 // Função para buscar o curso com base no número
 function findCourseByNumber(number) {
     return courses.find(course => course.number === number);
 }
-// Adiciona eventos de clique nas divs fixas para mostrar os detalhes
-document.querySelectorAll('.course').forEach(courseDiv => {
-    courseDiv.addEventListener('click', () => {
-        const courseNumber = parseInt(courseDiv.id.split('-')[1]); // Extrai o número do curso a partir do ID
-        const course = findCourseByNumber(courseNumber); // Busca o curso correspondente
-        displayCourseDetails(course); // Exibe os detalhes do curso
-    });
-});
 
 document.querySelectorAll('.navigation-home a').forEach(link => {
     // Verifica se o href do link é igual ao URL da página atual
