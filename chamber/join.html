@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvador Chamber of Commerce</title>
+    <meta name="description" content="Chamber page">
+    <meta name="author" content="Cristian Miranda">
+    <meta property="og:title" content="A course page about a Chamber of commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cristiangsmiranda.github.io/wdd231/images/profile.webp">
+    <meta property="og:url" content="https://cristiangsmiranda.github.io/wdd231/chamber.html">
+    <meta property="og:description" content="Chamber page description">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="images/Salvador-chamber-of-commerce.webp" as="image">
+    <link rel="preload" href="styles/join.css" as="style">
+    <link rel="stylesheet" href="styles/join.css" media="print" onload="this.media='all'">
+    <link rel="preload" href="scripts/join.js" as="script">
+    <script src="scripts/join.js" defer></script>
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <img src="images/logo-salvador.webp" alt="Logo" width="80" loading="lazy">
+                <div>
+                    <h1>Salvador</h1>
+                    <h1>Chamber of Commerce</h1>
+                </div>
+            </div>
+            <button id="menu" class="menu-button" aria-expanded="false" aria-controls="navigation" aria-label="Toggle navigation">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+            <nav class="navigation-home" id="navigation" role="navigation" aria-hidden="true">
+                <div class="box">
+                    <a href="index.html" tabindex="0">Home</a>
+                </div>
+                <div class="box">
+                    <a href="directory.html" tabindex="0">Directory</a>
+                </div>
+                <div class="box">
+                    <a href="join.html" tabindex="0">Join</a>
+                </div>
+                <div class="box">
+                    <a href="https://www.linkedin.com/in/cristian-gabriel-miranda-/" tabindex="0">Discover</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="main-content">
+                <div class="card-container">
+                    <form method="get" action="thankyou.html" class="wfl">
+                        <fieldset>
+                            <legend class="level">Membership Application Form</legend>
+                            <h4>Contact Information</h4>
+                            <div class="form-item">
+                                <label for="Firstname">First Name:<span class="required">*</span></label>
+                                <input type="text" id="Firstname" name="Firstname" title="Applicant's First Name" required autocomplete="given-name">
+                            </div>
+                            <div class="form-item">
+                                <label for="Lastname">Last Name:<span class="required">*</span></label>
+                                <input type="text" id="Lastname" name="Lastname" title="Applicant's Last Name" required autocomplete="family-name">
+                            </div>
+                            <div class="form-item">
+                                <label for="orgTitle">Organizational Title:<span class="required">*</span></label>
+                                <input type="text" id="orgTitle" name="orgTitle" title="Your Title in the Organization" pattern="[A-Za-z\s-]{7,}" required autocomplete="organization-title">
+                            </div>
+                            <div class="form-item">
+                                <label for="useremail">Email:<span class="required">*</span></label>
+                                <input type="email" id="useremail" name="useremail" title="Your Email Address" required autocomplete="email" placeholder="example@example.com">
+                            </div>
+                            <div class="form-item">
+                                <label for="phone">Mobile Phone:<span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" title="Your Mobile Phone Number" required autocomplete="tel">
+                            </div>
+                            <div class="form-item">
+                                <label for="orgName">Organization Name:<span class="required">*</span></label>
+                                <input type="text" id="orgName" name="orgName" title="Business/Organization Name" required autocomplete="organization">
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Membership Level</legend>
+                            <div class="form-item">
+                                <label for="membership">Choose your membership level:<span class="required">*</span></label>
+                                <select id="membership" name="membership" required>
+                                    <option value="" disabled selected>Select a membership level</option>
+                                    <option value="NP">Non-Profit (No Fee)</option>
+                                    <option value="bronze">Bronze Membership</option>
+                                    <option value="silver">Silver Membership</option>
+                                    <option value="gold">Gold Membership</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Business/Organization Description</legend>
+                            <div class="form-item">
+                                <label for="description">Description:</label>
+                                <textarea id="description" name="description" title="Description of your business/organization"></textarea>
+                            </div>
+                        </fieldset>
+                        <input type="hidden" id="timestamp" name="timestamp" value="">
+                        <input type="submit" class="small" value="JOIN US">
+                    </form>
+                </div>
+                <fieldset>
+                    <legend class="level">Membership Levels</legend>
+                    <div class="membership-cards">
+                        <div class="card" id="card1">
+                            <h2>Non-Profit Membership</h2>
+                            <p>No Fee</p>
+                            <a href="#" class="info-link" data-modal="modal1">Learn More</a>
+                        </div>
+                        <div class="card" id="card2">
+                            <h2>Bronze Membership</h2>
+                            <p>Basic benefits</p>
+                            <a href="#" class="info-link" data-modal="modal2">Learn More</a>
+                        </div>
+                        <div class="card" id="card3">
+                            <h2>Silver Membership</h2>
+                            <p>Enhanced benefits</p>
+                            <a href="#" class="info-link" data-modal="modal3">Learn More</a>
+                        </div>
+                        <div class="card" id="card4">
+                            <h2>Gold Membership</h2>
+                            <p>All benefits</p>
+                            <a href="#" class="info-link" data-modal="modal4">Learn More</a>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>        
+        </main>        
+        <footer>
+            <section class="information">
+                <p>Salvador - Chamber of Commerce</p>
+                <p>Address: R. da Belgica, Salvador, BA, Brazil</p>
+                <p>Phone: +55 (12) 34567-8910</p>
+                <p>Email: SalvadorCofC@email.com</p>   
+            </section>
+            <nav class="sociallinks">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.webp" alt="Facebook">
+                </a>
+                <a href="https://www.linkedin.com/in/cristian-gabriel-miranda-/">
+                    <img src="images/linkedin.webp" alt="LinkedIn">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram.webp" alt="Instagram">
+                </a>
+            </nav>
+            <section class="footer">
+                <p>WDD231 Class Project</p>
+                <p>Cristian G.S. Miranda</p>
+                <p>&copy; <span id="currentyear"></span> Salvador - Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </section>
+        </footer>
+        <dialog id="membership-details" class="modal">
+            <div class="dialog-header">
+                <h2></h2>
+                <button id="closeModal">❌</button>
+            </div>
+            <h3></h3>
+            <p><strong>Cost:</strong> <span class="cost"></span></p>
+            <p></p>
+            <p><strong>Additional Benefits:</strong></p>
+            <ul class="additional-benefits"></ul>
+        </dialog>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuButton = document.getElementById("menu");
+                const navigation = document.getElementById("navigation");
+                menuButton.addEventListener("click", function () {
+                    const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+                    menuButton.setAttribute("aria-expanded", !isExpanded);
+                    menuButton.classList.toggle("active");
+                    navigation.classList.toggle("open");
+                });
+                // Set current timestamp
+                document.getElementById("timestamp").value = new Date().toISOString();
+            });
+        </script>
+    </div>
+</body>
+</html>

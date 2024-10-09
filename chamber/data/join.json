@@ -1,0 +1,50 @@
+{
+    "memberships": [
+        {
+            "id": "modal1",
+            "title": "Non-Profit Membership Benefits",
+            "description": "A Non-Profit Membership offers essential resources for organizations looking to make a positive impact. Members enjoy access to exclusive funding opportunities, networking events, and tailored support for grant applications.",
+            "cost": "Free",
+            "additionalBenefits": [
+                "Access to special training events",
+                "Spotlight position on the homepage for a limited time",
+                "Discounts on future workshops"
+            ]
+        },
+        {
+            "id": "modal2",
+            "title": "Bronze Membership Benefits",
+            "description": "Bronze Membership provides basic benefits, including access to online resources, participation in workshops, and a subscription to our monthly newsletter. Ideal for small organizations looking to grow.",
+            "cost": "$250",
+            "additionalBenefits": [
+                "All Non-Profit benefits",
+                "Access to exclusive webinars and networking events",
+                "Quarterly feature in the newsletter"
+            ]
+        },
+        {
+            "id": "modal3",
+            "title": "Silver Membership Benefits",
+            "description": "Silver Membership enhances your experience with additional benefits such as priority access to events, discounted rates on services, and exclusive member-only webinars, designed to support your organizational goals.",
+            "cost": "$500",
+            "additionalBenefits": [
+                "All Bronze benefits",
+                "Priority registration for events",
+                "Discounted advertising options",
+                "Personalized support for grant applications"
+            ]
+        },
+        {
+            "id": "modal4",
+            "title": "Gold Membership Benefits",
+            "description": "Gold Membership offers comprehensive benefits, including all Silver Membership perks plus personalized consulting services, exclusive networking opportunities with industry leaders, and advanced training programs to ensure your organization's success.",
+            "cost": "$1,000",
+            "additionalBenefits": [
+                "All Silver benefits",
+                "One-on-one consulting sessions",
+                "VIP access to all events",
+                "Guaranteed feature placement on the homepage"
+            ]
+        }
+    ]
+}
