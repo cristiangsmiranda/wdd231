@@ -52,17 +52,7 @@
             </nav>
         </header>
         <main>
-            <h2>Thank you for your joining!</h2>
-            <h3>Your Submission Details</h3>
-            <fieldset>
-                <p><strong>First Name:</strong> <span id="first-name"></span></p>
-                <p><strong>Last Name:</strong> <span id="last-name"></span></p>
-                <p><strong>Email:</strong> <span id="email"></span></p>
-                <p><strong>Mobile Number:</strong> <span id="mobile"></span></p>
-                <p><strong>Business Name:</strong> <span id="business-name"></span></p>
-                <p><strong>Membership Level:</strong> <span id="membership-level"></span></p>
-                <p><strong>Submission Date:</strong> <span id="submission-date"></span></p>
-            </fieldset>
+
         </main>
             <footer>
                 <section class="information">
@@ -89,34 +79,6 @@
                     <p id="lastModified"></p>
                 </section>
             </footer>
-            <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    const formData = JSON.parse(localStorage.getItem('formData'));
-                    if (formData) {
-                        document.getElementById('first-name').textContent = formData.firstName;
-                        document.getElementById('last-name').textContent = formData.lastName;
-                        document.getElementById('email').textContent = formData.email;
-                        document.getElementById('mobile').textContent = formData.mobile;
-                        document.getElementById('business-name').textContent = formData.businessName;
-                        document.getElementById('membership-level').textContent = formData.membershipLevel; // Adiciona o nível de associação
-                        document.getElementById('submission-date').textContent = new Date(formData.currentDate).toLocaleString();
-        
-                        localStorage.removeItem('formData'); // Remove os dados após a leitura
-                    }
-                });
-
-
-                document.addEventListener("DOMContentLoaded", function () {
-                    const menuButton = document.getElementById("menu");
-                    const navigation = document.getElementById("navigation");
-                    menuButton.addEventListener("click", function () {
-                        const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
-                        menuButton.setAttribute("aria-expanded", !isExpanded);
-                        menuButton.classList.toggle("active");
-                        navigation.classList.toggle("open");
-                    });
-                });
-            </script>
         </div>
     </body>
     </html>
