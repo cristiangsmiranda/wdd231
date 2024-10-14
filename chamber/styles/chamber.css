@@ -397,3 +397,176 @@ footer img {
         text-align: center;
     }
 }
+
+/* Novas adições para o layout com sidebar e galeria */
+
+.info-card {
+    background-color: #ffffff;
+    border: 1px solid #ff0000;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.image-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre as fotos */
+}
+
+.photo-card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden; /* Para evitar que a imagem fique fora do card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: scale(1.05); /* Slightly scale the image on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+}
+
+.photo-card img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do card */
+    border-radius: 8px 8px 0 0; /* Apenas a parte superior arredondada */
+}
+
+.sidebar-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 10px; /* Espaçamento entre as colunas */
+    align-items: start; /* Alinha todos os itens ao topo */
+}
+
+.sidebar-content-1,
+.sidebar-content-2,
+.sidebar-content-3 {
+    margin-bottom: 0; /* Remove margens inferiores */
+}
+
+.sidebar-content-1 .info-card,
+.sidebar-content-2 .info-card {
+    margin: 10px; /* Adiciona margem ao redor dos cards */
+    padding: 20px;
+}
+
+.gallery-section {
+    grid-column: 2; /* Galeria de imagens na segunda coluna */
+    margin-top: 0; /* Sem margem superior */
+    align-self: start; /* Alinha a galeria ao topo da coluna */
+}
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.calendar th, .calendar td {
+    width: 14.28%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.calendar th {
+    background-color: #FFCC80;
+    color: #002922;
+}
+
+.calendar td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.calendar td:hover {
+    background-color: #ffe0b2;
+    cursor: pointer;
+}
+
+.calendar-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.calendar-controls button {
+    margin: 0 10px;
+    padding: 5px 10px;
+}
+
+main.main-content {
+    margin: 10px auto; /* Margem de 10px e centraliza o main */
+    max-width: 1200px; /* Largura máxima */
+    width: 100%; /* Largura total */
+}
+
+.visit-message {
+    background-color: #e0f7fa; /* Light blue background */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Space between cards */
+    font-weight: bold;
+}
+
+.image-scroll-container {
+    max-height: 1160px; /* Altura máxima do contêiner */
+    overflow-y: auto; /* Permitir rolagem vertical */
+    border: 1px solid #ddd; /* Borda para destaque */
+    border-radius: 8px; /* Arredondar os cantos */
+    padding: 10px; /* Espaçamento interno */
+}
+
+.image-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre as fotos */
+}
+
+.gallery-section h2 {
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Adiciona espaço acima e abaixo do texto */
+    margin: 0; /* Remove margens padrão */
+}
+
+.info-card h2 {
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 0; /* Adiciona espaço acima e abaixo do texto */
+    margin: 0; /* Remove margens padrão */
+}
+
+@media (max-width: 700px) {
+    .sidebar-layout {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .gallery-section {
+        grid-column: 1; /* A galeria ocupa toda a largura */
+        margin-top: 20px; /* Adiciona um pouco de espaço acima da galeria */
+    }
+
+    main.main-content {
+        margin: 10px; /* Margem de 10px */
+        width: calc(100% - 20px); /* Ajusta a largura total para não ultrapassar 100% */
+        max-width: 700px; /* Limite de largura para telas menores */
+    }
+
+    .info-card, .photo-card {
+        width: 100%; /* Faz os cards ocuparem a largura total */
+        box-sizing: border-box; /* Garante que padding e border estejam incluídos na largura total */
+    }
+
+    .photo-card img {
+        height: auto; /* Ajusta a altura da imagem para mantê-la proporcional */
+    }
+
+    .photo-card {
+        transition: none; /* Disable transition */
+    }
+
+    .photo-card:hover {
+        transform: none; /* No scaling */
+        box-shadow: none; /* No shadow */
+    }
+}

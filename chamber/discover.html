@@ -15,10 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="preload" href="images/Salvador-chamber-of-commerce.webp" as="image">
-    <link rel="preload" href="styles/join.css" as="style">
-    <link rel="stylesheet" href="styles/join.css" media="print" onload="this.media='all'">
-    <link rel="preload" href="scripts/join.js" as="script">
-    <script src="scripts/join.js" defer></script>
+    <link rel="preload" href="styles/chamber.css" as="style">
+    <link rel="stylesheet" href="styles/chamber.css" media="print" onload="this.media='all'">
     <link rel="icon" href="favicon.ico">
 </head>
 <body>
@@ -36,7 +34,7 @@
                 <span class="menu-icon"></span>
                 <span class="menu-icon"></span>
             </button>
-            <nav class="navigation-home" id="navigation" role="navigation" aria-hidden="true">
+            <nav class="navigation-home" id="navigation" aria-hidden="true">
                 <div class="box">
                     <a href="index.html" tabindex="0">Home</a>
                 </div>
@@ -51,34 +49,221 @@
                 </div>
             </nav>
         </header>
-        <main>
+        <main class="main-content sidebar-layout">
+            <div class="sidebar-container">
+                <aside class="sidebar-content-1">
+                    <div class="info-card">
+                        <h2>Events and Attractions</h2>
+                        <p>Check out the upcoming events:</p>
+                        <ul>
+                            <li>Music Festival - November 15th</li>
+                            <li>Craft Fair - November 22nd</li>
+                            <li>Street Race - November 29th</li>
+                            <li>Gastronomy Festival - December 8th</li>
+                            <li>Film Festival - December 15th</li>
+                            <li>Festival de Cinema - 15 de dezembro</li>
+                            <li>Fireworks - December 31st</li>
+                        </ul>
+                    </div>
+                </aside>
+                <aside class="sidebar-content-2">
+                    <div class="info-card">
+                        <h2>Demographics</h2>
+                        <p>Population: approximately 3 million</p>
+                        <p>Area: 1,123 km²</p>
+                        <p>Population density: around 2,580 inhabitants per km²</p>
+                        <p>Population growth rate: 1.2% per year</p>
+                        <p>Ethnic composition: 67% brown, 26% black, 7% white</p>
+                        <p>Main economic activity: Tourism and trade</p>
+                    </div>
+                </aside>
+        
+                <aside class="sidebar-content-3">
+                    <div class="info-card">
+                        <h2>Calendar</h2>
+                            <div class="calendar-controls">
+                            <button id="prevYear">←</button>
+                            <button id="prevMonth">❮</button>
+                            <h3 id="currentMonth"></h3>
+                            <button id="nextMonth">❯</button>
+                            <button id="nextYear">→</button>
+                        </div>
+                        <table class="calendar" id="calendar">
+                            <thead>
+                                <tr>
+                                    <th>Su</th>
+                                    <th>Mo</th>
+                                    <th>Tu</th>
+                                    <th>We</th>
+                                    <th>Th</th>
+                                    <th>Fr</th>
+                                    <th>Sa</th>
+                                </tr>
+                            </thead>
+                            <tbody id="calendarBody"></tbody>
+                        </table>
+                    </div>
+                </aside>
+            </div>
+        
+            <section class="gallery-section">
+                <h2>Photos of Salvador</h2>
+                <div class="image-scroll-container">
+                    <div class="image-column">
+                        <div class="photo-card">
+                            <img src="images/praia.webp" alt="Salvador Beach" loading="lazy">
+                        </div>
+                        <div class="photo-card">
+                            <img src="images/Centro_Histórico.webp" alt="Historic Center" loading="lazy">
+                        </div>
+                        <div class="photo-card">
+                            <img src="images/Igreja_de_São_Francisco.webp" alt="Church of San Francisco" loading="lazy">
+                        </div>
+                        <div class="photo-card">
+                            <img src="images/Largo_do_Pelourinho.webp" alt="Pelourinho" loading="lazy">
+                        </div>
+                        <div class="photo-card">
+                            <img src="images/mercado_modelo.webp" alt="Mercado Modelo" loading="lazy">
+                        </div>
+                        <div class="photo-card">
+                            <img src="images/Elevador_Lacerda.webp" alt="Lacerda Elevator" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>        
+        <footer>
+            <section class="information">
+                <p>Salvador - chamber of commerce</p>
+                <p>Address: R. da Belgica, Salvador, BA, Brazil</p>
+                <p>Phone: +55 (12) 34567-8910</p>
+                <p>Email: SalvadorCofC@email.com</p>   
+            </section>
+            <nav class="sociallinks">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.webp" alt="Facebook">
+                </a>
+                <a href="https://www.linkedin.com/in/cristian-gabriel-miranda-/">
+                    <img src="images/linkedin.webp" alt="Linkedin">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram.webp" alt="Instagram">
+                </a>
+            </nav>
+            <section class="footer">
+                <p>WDD231 Class Project</p>
+                <p>Cristian G.S. Miranda</p>
+                <p>&copy; <span id="currentyear"></span> Salvador - chamber of commerce</p>
+                <p id="lastModified"></p>
+            </section>
+        </footer>
+        <script>
+            const calendarBody = document.getElementById('calendarBody');
+            const currentMonthLabel = document.getElementById('currentMonth');
+            let currentDate = new Date();
+    
+            function renderCalendar() {
+                calendarBody.innerHTML = '';
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth();
+                currentMonthLabel.textContent = currentDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+                const firstDay = new Date(year, month, 1);
+                const lastDay = new Date(year, month + 1, 0);
+                const daysInMonth = lastDay.getDate();
+                const startDay = firstDay.getDay();
+    
+                let row = document.createElement('tr');
+                for (let i = 0; i < startDay; i++) {
+                    row.appendChild(document.createElement('td'));
+                }
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const cell = document.createElement('td');
+                    cell.textContent = day;
+                    cell.addEventListener('click', () => alert(`You selected the day ${day} of ${currentMonthLabel.textContent}`));
+                    row.appendChild(cell);
+                    if ((day + startDay) % 7 === 0) {
+                        calendarBody.appendChild(row);
+                        row = document.createElement('tr');
+                    }
+                }   
+                while (row.children.length < 7) {
+                    row.appendChild(document.createElement('td'));
+                }
+                calendarBody.appendChild(row);
+            }
+            document.getElementById('prevMonth').addEventListener('click', () => {
+                currentDate.setMonth(currentDate.getMonth() - 1);
+                renderCalendar();
+            });
+            document.getElementById('nextMonth').addEventListener('click', () => {
+                currentDate.setMonth(currentDate.getMonth() + 1);
+                renderCalendar();
+            });
+            document.getElementById('prevYear').addEventListener('click', () => {
+                currentDate.setFullYear(currentDate.getFullYear() - 1);
+                renderCalendar();
+            });
+            document.getElementById('nextYear').addEventListener('click', () => {
+                currentDate.setFullYear(currentDate.getFullYear() + 1);
+                renderCalendar();
+            });
+            renderCalendar();
 
-        </main>
-            <footer>
-                <section class="information">
-                    <p>Salvador - chamber of commerce</p>
-                    <p>Address: R. da Belgica, Salvador, BA, Brazil</p>
-                    <p>Phone: +55 (12) 34567-8910</p>
-                    <p>Email: SalvadorCofC@email.com</p>   
-                </section>
-                <nav class="sociallinks">
-                    <a href="https://facebook.com">
-                        <img src="images/facebook.webp" alt="Facebook">
-                    </a>
-                    <a href="https://www.linkedin.com/in/cristian-gabriel-miranda-/">
-                        <img src="images/linkedin.webp" alt="Linkedin">
-                    </a>
-                    <a href="https://instagram.com">
-                        <img src="images/instagram.webp" alt="Instagram">
-                    </a>
-                </nav>
-                <section class="footer">
-                    <p>WDD231 Class Project</p>
-                    <p>Cristian G.S. Miranda</p>
-                    <p>&copy; <span id="currentyear"></span> Salvador - chamber of commerce</p>
-                    <p id="lastModified"></p>
-                </section>
-            </footer>
-        </div>
-    </body>
-    </html>
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuButton = document.getElementById("menu");
+                const navigation = document.getElementById("navigation");
+                const sidebarContent = document.createElement("div");
+                sidebarContent.classList.add("visit-message");
+
+                function displayVisitMessage() {
+                    const lastVisitKey = 'lastVisit';
+                    const currentDate = new Date();
+                    const currentTime = currentDate.getTime();
+                    const lastVisit = localStorage.getItem(lastVisitKey);
+                    if (!lastVisit) {
+                        sidebarContent.textContent = "Welcome! Let us know if you have any questions.";
+                    } else {
+                        const lastVisitDate = new Date(lastVisit);
+                        const timeDifference = currentTime - lastVisitDate.getTime();
+                        const daysDifference = Math.floor(timeDifference / (1000 * 3600 * 24));
+                        if (daysDifference < 1) {
+                            sidebarContent.textContent = "Back so soon! Awesome!";
+                        } else {
+                            sidebarContent.textContent = `You last visited ${daysDifference} day${daysDifference > 1 ? 's' : ''} ago.`;
+                        }
+                    }
+                    localStorage.setItem(lastVisitKey, currentDate);
+                    const sidebarContainer = document.querySelector('.sidebar-container');
+                    sidebarContainer.prepend(sidebarContent);
+                }
+                displayVisitMessage();
+                menuButton.addEventListener("click", function () {
+                    const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+                    menuButton.setAttribute("aria-expanded", !isExpanded);
+                    menuButton.classList.toggle("active");
+                    navigation.classList.toggle("open");
+                });
+            });
+
+            document.addEventListener("DOMContentLoaded", () => {
+                let currentPath = window.location.pathname;
+                if (currentPath.startsWith('/')) {
+                    currentPath = currentPath.substring(1);
+                }
+                const navLinks = document.querySelectorAll('.navigation-home a');
+                navLinks.forEach(link => {
+                    if (currentPath.endsWith(link.getAttribute('href'))) {
+                        link.classList.add('active');
+                        link.style.backgroundColor = 'white';
+                        link.style.color = 'black';
+                    }
+                });
+            });
+
+            document.getElementById("currentyear").textContent = new Date().getFullYear();
+            document.getElementById("lastModified").textContent = "Last Modification: " + document.lastModified;
+        </script>
+    </div>
+</body>
+</html>
