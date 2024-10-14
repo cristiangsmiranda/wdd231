@@ -123,6 +123,13 @@ main {
     padding: 20px;
 }
 
+h5 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: center;
+}
+
 .card-container {
     background-color: #FFAB91;
     border-radius: 12px;
@@ -331,6 +338,30 @@ dialog button {
 .info-link:hover {
     background-color: darkred; 
 }
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card {
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0; /* Começa opaco */
+}
+
+.card.visible {
+    animation-name: slideUp;
+    opacity: 1; /* Fica visível ao final da animação */
+}
+
+
 
 footer {
     background-color: #FFCC80;

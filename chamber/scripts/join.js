@@ -103,3 +103,13 @@ document.addEventListener("DOMContentLoaded", function () {
     card3.style.animation = 'cardAnimation3 4s forwards';
     card4.style.animation = 'cardAnimation4 4s forwards';
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add('visible');
+        }, index * 200); // Atraso de 200ms entre cada card
+    });
+});
+
