@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Library</title>
+    <meta name="description" content="library page">
+    <meta name="author" content="Cristian Miranda">
+    <meta property="og:title" content="A project page about a library">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cristiangsmiranda.github.io/wdd231/images/profile.webp">
+    <meta property="og:url" content="https://cristiangsmiranda.github.io/wdd231/chamber.html">
+    <meta property="og:description" content="library page description">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="images/welcome.webp" as="image">
+    <link rel="preload" href="styles/your_library.css" as="style">
+    <link rel="stylesheet" href="styles/your_library.css" media="print" onload="this.media='all'">
+    <link rel="preload" href="scripts/your_library.js" as="script">
+    <script src="scripts/your_library.js" defer></script>
+    <link rel="icon" href="library_favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <img src="images/your_library.webp" alt="Logo" width="80" loading="lazy">
+                <div>
+                    <h1>Your</h1>
+                    <h1>Library</h1>
+                </div>
+            </div>
+            <button id="menu" class="menu-button" aria-expanded="false" aria-controls="navigation" aria-label="Toggle navigation">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+            <nav class="navigation-home" id="navigation" role="navigation" aria-hidden="true">
+                <div class="box">
+                    <a href="your_library.html" tabindex="0">Home</a>
+                </div>
+                <div class="box">
+                    <a href="discover.html" tabindex="0">Discover</a>
+                </div>
+                <div class="box">
+                    <a href="author.html" tabindex="0">become an author</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="welcome">
+                <img src="images/welcome.webp" alt="Welcome" width="1200" loading="lazy" class="hero-image">
+                <h2 class="welcome-message">Welcome to Your Library!<br>Discover our works and explore the world of reading.</h2>
+                    <a href="discover.html" class="cta-button"></a>
+            </section>
+            <section class="highlighted-works">
+                <h2>Obras de Destaque</h2>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="images/1.webp" alt="Obra 1" loading="lazy">
+                        <img src="images/2.webp" alt="Obra 2" loading="lazy">
+                        <img src="images/3.webp" alt="Obra 3" loading="lazy">
+                        <img src="images/4.webp" alt="Obra 4" loading="lazy">
+                        <img src="images/5.webp" alt="Obra 5" loading="lazy">
+                        <img src="images/6.webp" alt="Obra 6" loading="lazy">
+                        <img src="images/7.webp" alt="Obra 7" loading="lazy">
+                        <img src="images/8.webp" alt="Obra 8" loading="lazy">
+                        <img src="images/9.webp" alt="Obra 9" loading="lazy">
+                        <img src="images/10.webp" alt="Obra 10" loading="lazy">
+                        <img src="images/11.webp" alt="Obra 11" loading="lazy">
+                        <img src="images/12.webp" alt="Obra 12" loading="lazy">
+                        <img src="images/13.webp" alt="Obra 13" loading="lazy">
+                        <img src="images/14.webp" alt="Obra 14" loading="lazy">
+                        <img src="images/15.webp" alt="Obra 15" loading="lazy">
+                        <img src="images/16.webp" alt="Obra 16" loading="lazy">
+                    </div>
+                </div>
+            </section>
+            <section class="call-to-action">
+                <h2>Join our newsletter</h2>
+                <form>
+                    <input type="text" name="name" placeholder="Your Name"><br>
+                    <input type="email" name="email" placeholder="Your Email"><br>
+                    <input type="submit" value="Join">
+                </form>
+            </section>
+            <section class="grid">
+                <div class="grid-item">
+                    <h3>Everything per kilo: A story of weight</h3>
+                    <p>A book about a boy who is about to lose everything, until his wish comes true, from a nobody to a hero. embark on this thrilling adventure full of action, mystery and romance!</p>
+                    <a href="your_library.html">
+                        <img src="images/everything_per_kilo.webp" alt="everything_per_kilo_book" loading="lazy">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <h3>Thurk Ragnarok</h3>
+                    <p>What would you do if you were the End Times incarnate? Follow the journey of Thurk Ragnarok in the Nordic era, a man destined to destroy the gods and all nine kingdoms!"</p>                    
+                    <a href="your_library.html">
+                        <img src="images/thurk_ragnarok.webp" alt="thurk_ragnarok_book" loading="lazy">
+                    </a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section class="information">
+                <p>Your Library</p>
+                <p>Address: St. Byfrost, Golden Kingdom, Asgard</p>
+                <p>Phone: +12 (34) 56789-1011</p>
+                <p>Email: YourLibrary@email.com</p>   
+            </section>
+            <nav class="sociallinks">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.webp" alt="Facebook" loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/in/cristian-gabriel-miranda-/">
+                    <img src="images/linkedin.webp" alt="Linkedin" loading="lazy">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram.webp" alt="Instagram" loading="lazy">
+                </a>
+            </nav>
+            <section class="footer">
+                <p>Your Library Project</p>
+                <p>Cristian G.S. Miranda</p>
+                <p>&copy; <span id="currentyear"></span> Your Library</p>
+                <p id="lastModified"></p>
+            </section>
+        </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuButton = document.getElementById("menu");
+                const navigation = document.getElementById("navigation");
+                menuButton.addEventListener("click", function () {
+                    const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+                    menuButton.setAttribute("aria-expanded", !isExpanded);
+                    menuButton.classList.toggle("active");
+                    navigation.classList.toggle("open");
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>
