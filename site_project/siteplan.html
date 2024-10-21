@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Library</title>
+    <meta name="description" content="library page">
+    <meta name="author" content="Cristian Miranda">
+    <meta property="og:title" content="A project page about a library">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cristiangsmiranda.github.io/wdd231/images/profile.webp">
+    <meta property="og:url" content="https://cristiangsmiranda.github.io/wdd231/site_project/your_library.html">
+    <meta property="og:description" content="Your Library is an online library with the aim of making original works by aspiring authors popular. This site also allows you to become an author and venture into the world of books">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="images/welcome.webp" as="image">
+    <link rel="preload" href="styles/siteplan.css" as="style">
+    <link rel="stylesheet" href="styles/siteplan.css" media="print" onload="this.media='all'">
+    <link rel="preload" href="scripts/your_library.js" as="script">
+    <script src="scripts/your_library.js" defer></script>
+    <link rel="icon" href="library_favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <img src="images/your_library.webp" alt="Logo" width="80" loading="lazy">
+                <div>
+                    <h1>Your</h1>
+                    <h1>Library</h1>
+                </div>
+            </div>
+            <button id="menu" class="menu-button" aria-expanded="false" aria-controls="navigation" aria-label="Toggle navigation">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+            <nav class="navigation-home" id="navigation" role="navigation" aria-hidden="true">
+                <div class="box">
+                    <a href="your_library.html" tabindex="0">Home</a>
+                </div>
+                <div class="box">
+                    <a href="discover.html" tabindex="0">Discover</a>
+                </div>
+                <div class="box">
+                    <a href="author.html" tabindex="0">become an author</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <fieldset class="center-content">
+                <section class="content">
+                    <h2>Welcome to Your Library</h2>
+                    <p>We're happy to have you here. This is a space dedicated to promoting original works by up-and-coming authors. Feel free to explore, discover new stories and maybe even become an author! Your literary journey begins now. Enjoy!</p>
+                </section>
+            </fieldset>
+            <section class="content center-content">
+                <h2>Our Purpose:</h2>
+                <p>Your Library is an online library whose aim and purpose is to popularize original works by aspiring authors. This site also allows anyone to become an author by venturing into the world of books.</p>
+            </section>
+            
+            <section class="content center-content">
+                <h2>Scenarios:</h2>
+                <section class="grid">
+                    <div class="grid-item">
+                        <h2>Everything per kilo: A story of weight</h2>
+                        <p>A book about a boy who is about to lose everything, until his wish comes true, from a nobody to a hero. embark on this thrilling adventure full of action, mystery and romance!</p>
+                    </div>
+                    <div class="grid-item">
+                        <h2>Thurk Ragnarok</h2>
+                        <p>What would you do if you were the End Times incarnate? Follow the journey of Thurk Ragnarok in the Nordic era, a man destined to destroy the gods and all nine kingdoms!"</p>                    
+                    </div>
+                </section>
+            </section>
+            <section class="colors center-content">
+                <h2>Color Schema:</h2>
+                <p>
+                    Background Color: #3C4245 (Dark Gray Background)<br>
+                    Header Gradient: linear-gradient(#920000, #A60000, #B10000, #BB0000, #C60000) (Red Gradient for Header)<br>
+                    Navigation Background: linear-gradient(#C60000, #870202, #660404, #5A0606, #510606) (Dark Red for Navigation Dropdown)<br>
+                    Navigation Link Color: #ffffff (White Text for Navigation Links)<br>
+                    Navigation Link Hover Color: #661717 (Dark Red for Hover Effect)<br>
+                    Call to Action Background: #141819 (Very Dark Gray)<br>
+                    Call to Action Button Background: #333 (Dark Gray)<br>
+                    Call to Action Button Hover: #3A3F42 (Slightly Lighter Dark Gray)<br>
+                    Footer Gradient: linear-gradient(#783434, #6e2020, #661515, #620c0c, #430303) (Dark Red Gradient for Footer)<br>
+                    Grid Item Background: #cccccc (Light Gray for Grid Items)<br>
+                </p>
+            </section>
+            <section class="typography center-content">
+                <h2>Typography:</h2>
+                <p>Heading Font: Georgia, serif (Used for H1, H2)<br>Paragraph Font: Inter, sans-serif (Used for Body Text, Paragraphs)</p>
+            </section>
+            <h2 class="center-title">Wireframe</h2>
+            <section class="grid">
+                <div class="grid-item">
+                    <img src="images/desktop-wireframe.webp" alt="Desktop" loading="lazy">
+                    <p>Desktop View</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/mobile-wireframe.webp" alt="Mobile" loading="lazy">
+                    <p>Mobile View</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section class="information">
+                <p>Your Library</p>
+                <p>Address: St. Byfrost, Golden Kingdom, Asgard</p>
+                <p>Phone: +12 (34) 56789-1011</p>
+                <p>Email: YourLibrary@email.com</p>   
+            </section>
+            <nav class="sociallinks">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.webp" alt="Facebook" loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/in/cristian-gabriel-miranda-/">
+                    <img src="images/linkedin.webp" alt="Linkedin" loading="lazy">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram.webp" alt="Instagram" loading="lazy">
+                </a>
+            </nav>
+            <section class="footer">
+                <p>Your Library Project</p>
+                <p>Cristian G.S. Miranda</p>
+                <p>&copy; <span id="currentyear"></span> Your Library</p>
+                <p id="lastModified"></p>
+            </section>
+        </footer>
+    </div>
+</body>
+</html>
