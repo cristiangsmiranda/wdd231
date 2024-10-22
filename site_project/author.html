@@ -48,8 +48,81 @@
             </nav>
         </header>
         <main>
-
-        </main>        
+            <h2>Registration Form</h2>
+            <form id="authorForm">
+                <!-- Personal Information Section -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="fullName">Full Name:<span class="required">*</span></label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    
+                    <label for="email">Email:<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="phone">Phone:<span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                    
+                    <label for="age">Age:<span class="required">*</span></label>
+                    <input type="number" id="age" name="age" required>
+                </fieldset>
+        
+                <!-- Career Section -->
+                <fieldset>
+                    <legend>Career</legend>
+                    <label for="goal">What is your goal?<span class="required">*</span></label>
+                    <input type="text" id="goal" name="goal" required>
+        
+                    <label for="workType">What type of work would you like to publish:<span class="required">*</span></label>
+                    <select id="workType" name="workType" required>
+                        <option value="" disabled selected>Select an option</option> <!-- Placeholder -->
+                        <option value="draft">Draft</option>
+                        <option value="final_without_rights">Final work, but without copyright</option>
+                        <option value="final_with_rights">Final work with copyright</option>
+                    </select>
+        
+                    <label for="synopsis">Please provide a synopsis:<span class="required">*</span></label>
+                    <textarea id="synopsis" name="synopsis" required></textarea>
+        
+                    <label for="ageRange">Target age range of your work:<span class="required">*</span></label>
+                    <select id="ageRange" name="ageRange" required>
+                        <option value="" disabled selected>Select an option</option> <!-- Placeholder -->
+                        <option value="all">All Ages</option>
+                        <option value="10-12">10-12 years</option>
+                        <option value="13-17">13-17 years</option>
+                        <option value="18+">18 years and older</option>
+                    </select>
+        
+                    <label for="genre1">Genre of the work (required):<span class="required">*</span></label>
+                    <input type="text" id="genre1" name="genre1" required>
+                    <div id="addGenreContainer"></div>
+                    <button type="button" id="addGenreButton">Add another genre</button>
+                    <div id="genreError" style="color: red; display: none;">Please select at least 1 genre.</div>
+        
+                    <label for="fileUpload">Upload your file (PDF or DOCX):<span class="required">*</span></label>
+                    <input type="file" id="fileUpload" name="fileUpload" accept=".pdf,.docx" required>
+                </fieldset>
+        
+                <!-- Optional Information Section -->
+                <fieldset>
+                    <legend>Optional Information</legend>
+                    <label for="aboutYou">Tell us more about yourself:<span class="optional">(Optional)</span></label>
+                    <textarea id="aboutYou" name="aboutYou"></textarea>
+        
+                    <label for="isFirstWork">Is this your first work?:<span class="optional">(Optional)</span></label>
+                    <select id="isFirstWork" name="isFirstWork">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+        
+                    <label for="pseudonym">Enter your pseudonym:<span class="optional">(Optional)</span></label>
+                    <input type="text" id="pseudonym" name="pseudonym">
+                </fieldset>
+        
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+        
+               
         <footer>
             <section class="information">
                 <p>Your Library</p>

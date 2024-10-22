@@ -111,6 +111,123 @@ main{
     margin-bottom: 20px;
 }
 
+main h2 {
+    color: white; /* Muda a cor do texto para branco */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+form {
+    display: block;
+    margin: 20px auto;
+    background-color: #f0f0f0; /* Cor de fundo cinza claro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 800px;
+}
+
+label {
+    display: block;
+    margin-top: 15px; /* Espaço acima dos rótulos */
+    font-weight: bold; /* Rótulos em negrito */
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"] {
+    width: 50%; /* Faz com que os campos ocupem 50% da largura disponível */
+    margin-top: 5px; /* Espaço acima dos campos */
+    padding: 10px; /* Espaço interno nos campos */
+    border: 1px solid #ccc; /* Borda dos campos */
+    border-radius: 4px; /* Cantos arredondados */
+    transition: border-color 0.3s; /* Transição suave na mudança de borda */
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="number"]:focus {
+    border-color: #920000; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+select {
+    width: 50%; /* Para ocupar 100% da largura disponível */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Fundo cinza claro */
+    font-family: 'Inter', sans-serif; /* Fonte consistente com o restante do formulário */
+    font-size: 1em; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    appearance: none; /* Remove o estilo padrão do navegador */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><polygon points="0,0 10,0 5,5" fill="%23333"/></svg>'); /* Seta personalizada */
+    background-repeat: no-repeat; /* Não repetir a imagem de fundo */
+    background-position: right 10px center; /* Posiciona a seta à direita */
+    background-size: 10px; /* Tamanho da seta */
+}
+
+select:focus {
+    border-color: #007bff; /* Borda azul ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+option {
+    padding: 10px; /* Espaçamento interno para as opções */
+}
+
+
+
+button {
+    margin-top: 20px; /* Espaço acima do botão */
+    padding: 10px 15px; /* Espaço interno do botão */
+    background-color: #393939; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 4px; /* Cantos arredondados do botão */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave na mudança de cor */
+}
+
+button:hover {
+    background-color: #920000; /* Cor ao passar o mouse */
+}
+
+.selected-genres {
+    margin-top: 10px; /* Espaço acima dos gêneros selecionados */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #e0e0e0; /* Fundo levemente diferente */
+    border-radius: 4px; /* Cantos arredondados */
+    max-width: 50%; /* Máxima largura igual aos campos de entrada */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os gêneros se movam para a linha seguinte, se necessário */
+}
+
+.selected-genres span {
+    margin-right: 10px; /* Espaço entre os gêneros selecionados */
+    background-color: #ccc; /* Cor de fundo dos gêneros selecionados */
+    padding: 5px; /* Espaçamento interno dos gêneros */
+    border-radius: 4px; /* Cantos arredondados */
+}
+
+#genreError {
+    color: red; /* Cor vermelha para mensagens de erro */
+    margin-top: 10px; /* Espaço acima da mensagem de erro */
+}
+
+.required {
+    color: rgb(115, 8, 8); /* Cor vermelha para o asterisco */
+}
+
+.optional {
+    color: blue; /* Cor azul para o texto opcional */
+    font-size: 0.9em; /* Tamanho da fonte menor para o texto opcional */
+    margin-left: 5px; /* Espaço à esquerda do texto opcional */
+}
+
+fieldset legend {
+    font-family: Georgia, serif; /* Define a fonte como Georgia */
+    font-size: 1.5em; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito para mais destaque */
+    margin-bottom: 10px; /* Espaço abaixo do legend */
+}
+
+
 footer {
     background: linear-gradient(#783434, #6e2020, #661515, #620c0c, #430303);
     color: white;
