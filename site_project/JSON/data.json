@@ -6,15 +6,19 @@
       "genre": "Fantasy",
       "synopsis": "In a world where the greatest challenge lies within your dreams, the hardest and most rewarding job of all is out of reach for almost the entire population. The Dream Hunters are the beings born with the ability to invade dreams and change everything they want, at least as long as the bogeyman is not within their reach.",
       "width": 300,
-      "height": 450
+      "height": 450,
+      "rating": 5,
+      "views": 24875
     },
     {
       "title": "Everything Per Kilo: A Story Of Weight",
       "cover": "images/everything_per_kilo-a_story_of_weight.webp",
       "genre": "Fantasy",
-      "synopsis": "What would you do if you were the End Times incarnate? Follow the journey of Thurk Ragnarok in the Nordic era, a man destined to destroy the gods and all nine kingdoms!"                    ,
+      "synopsis": "A book about a boy who is about to lose everything, until his wish comes true, from a nobody to a hero. embark on this thrilling adventure full of action, mystery and romance!",
       "width": 300,
-      "height": 450
+      "height": 450,
+      "rating": 5,
+      "views": 35980
     },
     {
       "title": "Echoes of the Past",
@@ -22,7 +26,9 @@
       "genre": "Thriller",
       "synopsis": "When a private detective receives a missing persons case, he discovers that the victim was linked to a series of unresolved events from the past. Each clue leads him to a confrontation with his own demons, revealing truths he never imagined.",
       "width": 300,
-      "height": 450
+      "height": 450,
+      "rating": 4,
+      "views": 17362
     },
     {
       "title": "Hearts on the Run",
@@ -30,7 +36,9 @@
       "genre": "Romance",
       "synopsis": "During a train journey, two strangers, Júlia and Lucas, meet and share their fears and dreams. However, their lives are complicated by past relationships. They will need to decide if they are willing to risk everything for a love that could change their lives forever.",
       "width": 300,
-      "height": 450
+      "height": 450,
+      "rating": 4,
+      "views": 19983
     },
     {
       "title": "In the Arms of Spring",
@@ -38,7 +46,9 @@
       "genre": "Romance",
       "synopsis": "In a small town, Clara, a dreamy florist, finds an old diary that once belonged to a mysterious traveler. Each page reveals secrets about love and life. When the traveler returns, they find themselves caught up in a story that defies time and separates them.",
       "width": 300,
-      "height": 450
+      "height": 450,
+      "rating": 5,
+      "views": 24987
     },
     {
       "title": "Night Without End",
@@ -46,7 +56,9 @@
       "genre": "Thriller",
       "synopsis": "During a storm, a group of strangers take refuge in an isolated mansion. When one of them is found dead, paranoia sets in. As secrets are revealed, everyone becomes a suspect, and the truth may be deadlier than they imagined.",
       "width": 300,
-      "height": 450
+      "height": 450,
+      "rating": 5,
+      "views": 19875
     },
     {
       "title": "The Dance of the Stars",
@@ -54,7 +66,9 @@
       "genre": "Romance",
       "synopsis": "In a dance competition, Sofia and Rafael become partners. What begins as a simple partnership turns into a burning passion. However, secrets from the past threaten to tear them apart. Can they find their way back to each other before it's too late?",
       "width": 300,
-      "height": 450
+      "height": 450,
+      "rating": 5,
+      "views": 14325
     },
     {
       "title": "The Guardians of Time",
@@ -62,7 +76,9 @@
       "genre": "Fantasy",
       "synopsis": "When a group of friends discover an ancient clock that controls time, they are pulled into adventures in different eras. However, by altering historical events, they must face the consequences of their actions and restore the balance of time.",
       "width": 300,
-      "height": 450
+      "height": 450,
+      "rating": 3,
+      "views": 8430
     },
     {
       "title": "The Hidden Truth",
@@ -70,7 +86,9 @@
       "genre": "Thriller",
       "synopsis": "An investigative reporter, Lara, encounters an unsolved case that leads her into a web of lies and secrets. As she digs deeper, she realizes that she is being watched by someone who will do anything to keep the truth hidden.",
       "width": 300,
-      "height": 450
+      "height": 450,
+      "rating": 3,
+      "views": 17243
     },
     {
       "title": "The Last Phone Call",
@@ -78,7 +96,9 @@
       "genre": "Thriller",
       "synopsis": "After receiving a cryptic phone call, psychologist Ana finds herself involved in a psychological game with a serial killer. As the details of the case unfold, she realizes that her own life and that of her patients are at stake.",
       "width": 300,
-      "height": 450
+      "height": 450,
+      "rating": 4,
+      "views": 9340
     },
     {
       "title": "The Last Sunset",
@@ -86,7 +106,9 @@
       "genre": "Romance",
       "synopsis": "After the death of her grandfather, Ana discovers love letters that reveal a forbidden romance. Following the clues left behind, she meets Miguel, a lonely artist who bears his own scars. Together, they search for the truth that will unite them in unexpected ways.",
       "width": 300,
-      "height": 450
+      "height": 450,
+      "rating": 4,
+      "views": 10433
     },
     {
       "title": "The Prophecy of the Elements",
@@ -94,7 +116,9 @@
       "genre": "Fantasy",
       "synopsis": "In a world where the elements are controlled by mystical beings, four young people discover that they are the last descendants of an ancient lineage. Together, they must face a powerful enemy who wishes to dominate the elements and bring chaos to the world.",
       "width": 300,
-      "height": 450
+      "height": 450,
+      "rating": 4,
+      "views": 15043
     },
     {
       "title": "The Shadow Realm",
@@ -102,7 +126,9 @@
       "genre": "Fantasy",
       "synopsis": "When an ancient artifact is activated, a young girl named Elara is transported to a magical realm at war. With the help of a fearless warrior, she must discover her hidden powers and unite the kingdoms before darkness consumes all.",
       "width": 300,
-      "height": 450
+      "height": 450,
+      "rating": 4,
+      "views": 27453
     },
     {
       "title": "The Sword of Destiny",
@@ -110,7 +136,9 @@
       "genre": "Fantasy",
       "synopsis": "After finding a magical sword, young Alex is chosen to become the savior of his world. Together with a fearless princess and a wise mentor, he embarks on an epic journey full of challenges, betrayals and discoveries about his true identity.",
       "width": 300,
-      "height": 450
+      "height": 450,
+      "rating": 5,
+      "views": 11023
     },
     {
       "title": "Thurk Ragnarok: Fate Of The Gods",
@@ -118,7 +146,9 @@
       "genre": "Fantasy",
       "synopsis": "What would you do if you were the End Times incarnate? Follow the journey of Thurk Ragnarok in the Nordic era, a man destined to destroy the gods and all nine kingdoms!",
       "width": 300,
-      "height": 450
+      "height": 450,
+      "rating": 5,
+      "views": 29464
     }
   ]
 }

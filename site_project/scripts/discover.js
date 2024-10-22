@@ -1,3 +1,5 @@
+let currentDetailsContainer = null; // Variável para armazenar a caixa de detalhes atual
+
 async function loadBooks() {
     try {
         const response = await fetch('JSON/data.json');
@@ -5,14 +7,32 @@ async function loadBooks() {
         displayBooks(data.books);
 
         const genreFilter = document.getElementById('genre-filter');
+        const ratingFilter = document.getElementById('rating-filter');
+
         genreFilter.addEventListener('change', () => {
-            const selectedGenre = genreFilter.value;
-            const filteredBooks = selectedGenre ? data.books.filter(book => book.genre === selectedGenre) : data.books;
-            displayBooks(filteredBooks);
+            applyFilters(data.books, genreFilter.value, ratingFilter.value);
+        });
+
+        ratingFilter.addEventListener('change', () => {
+            applyFilters(data.books, genreFilter.value, ratingFilter.value);
         });
     } catch (error) {
         console.error("Erro ao carregar os livros:", error);
     }
+}
+
+function applyFilters(books, selectedGenre, selectedRating) {
+    let filteredBooks = books;
+
+    if (selectedGenre) {
+        filteredBooks = filteredBooks.filter(book => book.genre === selectedGenre);
+    }
+
+    if (selectedRating) {
+        filteredBooks = filteredBooks.filter(book => book.rating === parseInt(selectedRating));
+    }
+
+    displayBooks(filteredBooks);
 }
 
 function displayBooks(books) {
@@ -22,27 +42,63 @@ function displayBooks(books) {
         const card = document.createElement('div');
         card.classList.add('book-card');
         card.innerHTML = `
-            <a href="discover.html" class="book-link">
-                <img 
-                    src="${book.cover}" 
-                    srcset="${book.cover.replace('-small', '-medium')} 600w,
-                            ${book.cover.replace('-small', '-large')} 1200w"
-                    sizes="(max-width: 600px) 100vw,
-                           (max-width: 1200px) 50vw,
-                           33vw" 
-                    alt="${book.title}" 
-                    width="${book.width}" 
-                    height="${book.height}" 
-                    class="book-cover" 
-                    loading="lazy">
+            <a href="#" class="book-link" onclick="openBookDetails(event, '${book.title}', '${book.cover}', '${book.genre}', '${book.synopsis}', ${book.rating}, ${book.views})">
                 <h3>${book.title}</h3>
+                <img src="${book.cover}" alt="${book.title}" class="book-cover">
                 <p>Genre: ${book.genre}</p>
-                <p>${book.synopsis}</p>
+                <div class="stars">${getStars(book.rating)}</div>
             </a>
         `;
         bookList.appendChild(card);
     });
 }
+
+function getStars(rating) {
+    let starsHtml = '';
+    for (let i = 1; i <= 5; i++) {
+        starsHtml += `<span class="star ${i <= rating ? 'filled' : ''}">★</span>`;
+    }
+    return starsHtml;
+}
+
+function openBookDetails(event, title, cover, genre, synopsis, rating, views) {
+    event.preventDefault(); // Impede o comportamento padrão do link
+
+    // Fechar a caixa de detalhes atual, se existir
+    if (currentDetailsContainer) {
+        currentDetailsContainer.remove();
+    }
+
+    const detailsContainer = document.createElement('div');
+    detailsContainer.classList.add('book-details');
+    detailsContainer.innerHTML = `
+        <div class="details-header">
+            <span class="close-button" onclick="closeBookDetails()">✖</span>
+        </div>
+        <h3>${title}</h3>
+        <img src="${cover}" alt="${title}" class="book-cover">
+        <p>${genre}</p>
+        <div class="stars">${getStars(rating)}</div>
+        <p>(${views} visualizações)</p>
+        <p>${synopsis}</p>
+    `;
+    document.body.appendChild(detailsContainer);
+    currentDetailsContainer = detailsContainer; // Armazena a nova caixa de detalhes
+
+    detailsContainer.addEventListener('click', (e) => {
+        if (e.target === detailsContainer) {
+            closeBookDetails();
+        }
+    });
+}
+
+function closeBookDetails() {
+    if (currentDetailsContainer) {
+        currentDetailsContainer.remove();
+        currentDetailsContainer = null; // Reseta a variável
+    }
+}
+
 document.addEventListener("DOMContentLoaded", loadBooks);
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -59,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-  
-  document.getElementById("currentyear").textContent = new Date().getFullYear();
-  document.getElementById("lastModified").textContent = "Last Modification: " + document.lastModified;
-  
+
+document.getElementById("currentyear").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = "Last Modification: " + document.lastModified;
