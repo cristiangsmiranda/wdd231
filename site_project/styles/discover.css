@@ -173,15 +173,13 @@ footer {
     justify-content: space-between;
     align-items: center;
 }
-footer .information p, footer .footer p {
+footer .information p {
     margin: 5px 0;
 }
 footer .information {
     max-width: 50%;
     text-align: left;
-}
-footer .footer {
-    text-align: right;
+    margin: 5px 0;
 }
 .sociallinks img {
     width: 30px;
@@ -190,9 +188,8 @@ footer .footer {
     transition: transform 0.3s;
 }
 .sociallinks img:hover {
-    transform: scale(1.1); /* Aumenta um pouco o tamanho ao passar o mouse */
+    transform: scale(1.1);
 }
-
 
 @media (max-width: 1200px) {
     .book-list {
