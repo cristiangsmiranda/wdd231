@@ -26,6 +26,8 @@ header {
 }
 .header-left img {
     margin-right: 15px;
+    width: 80px;
+    height: auto;
 }
 .header-left h1 {
     margin: 0;
@@ -39,10 +41,6 @@ header {
 .header-left h1:last-child {
     font-weight: normal;
     font-size: 1rem;
-}
-.header-left img {
-    width: 80px;
-    height: auto;
 }
 
 .navigation-home {
