@@ -23,7 +23,18 @@ function displayBooks(books) {
         card.classList.add('book-card');
         card.innerHTML = `
             <a href="discover.html" class="book-link">
-                <img src="${book.cover}" alt="${book.title}" class="book-cover" loading="lazy" width="200" height="250">
+                <img 
+                    src="${book.cover}" 
+                    srcset="${book.cover.replace('-small', '-medium')} 600w,
+                            ${book.cover.replace('-small', '-large')} 1200w"
+                    sizes="(max-width: 600px) 100vw,
+                           (max-width: 1200px) 50vw,
+                           33vw" 
+                    alt="${book.title}" 
+                    width="${book.width}" 
+                    height="${book.height}" 
+                    class="book-cover" 
+                    loading="lazy">
                 <h3>${book.title}</h3>
                 <p>Genre: ${book.genre}</p>
                 <p>${book.synopsis}</p>
