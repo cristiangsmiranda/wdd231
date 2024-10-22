@@ -32,10 +32,7 @@ function displayBooks(books) {
         bookList.appendChild(card);
     });
 }
-
-
 document.addEventListener("DOMContentLoaded", loadBooks);
-
 
 document.addEventListener("DOMContentLoaded", () => {
     let currentPath = window.location.pathname;
