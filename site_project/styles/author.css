@@ -112,119 +112,119 @@ main{
 }
 
 main h2 {
-    color: white; /* Muda a cor do texto para branco */
-    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: white;
+    margin-bottom: 20px;
 }
 
 form {
     display: block;
     margin: 20px auto;
-    background-color: #f0f0f0; /* Cor de fundo cinza claro */
+    background-color: #f0f0f0;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     max-width: 800px;
 }
 
 label {
     display: block;
-    margin-top: 15px; /* Espaço acima dos rótulos */
-    font-weight: bold; /* Rótulos em negrito */
+    margin-top: 15px;
+    font-weight: bold;
 }
 
 input[type="text"], input[type="email"], input[type="tel"], input[type="number"] {
-    width: 50%; /* Faz com que os campos ocupem 50% da largura disponível */
-    margin-top: 5px; /* Espaço acima dos campos */
-    padding: 10px; /* Espaço interno nos campos */
-    border: 1px solid #ccc; /* Borda dos campos */
-    border-radius: 4px; /* Cantos arredondados */
-    transition: border-color 0.3s; /* Transição suave na mudança de borda */
+    width: 50%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
 }
 
 input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="number"]:focus {
-    border-color: #920000; /* Cor da borda ao focar */
-    outline: none; /* Remove o contorno padrão */
+    border-color: #920000;
+    outline: none;
 }
 
 select {
-    width: 50%; /* Para ocupar 100% da largura disponível */
-    padding: 10px; /* Espaçamento interno */
-    border: 1px solid #ccc; /* Borda cinza clara */
-    border-radius: 5px; /* Bordas arredondadas */
-    background-color: #f9f9f9; /* Fundo cinza claro */
-    font-family: 'Inter', sans-serif; /* Fonte consistente com o restante do formulário */
-    font-size: 1em; /* Tamanho da fonte */
-    color: #333; /* Cor do texto */
-    appearance: none; /* Remove o estilo padrão do navegador */
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    color: #333;
+    appearance: none;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><polygon points="0,0 10,0 5,5" fill="%23333"/></svg>'); /* Seta personalizada */
-    background-repeat: no-repeat; /* Não repetir a imagem de fundo */
-    background-position: right 10px center; /* Posiciona a seta à direita */
-    background-size: 10px; /* Tamanho da seta */
+    background-repeat: no-repeat;
+    background-position: right 10px center; 
+    background-size: 10px;
 }
 
 select:focus {
-    border-color: #007bff; /* Borda azul ao focar */
-    outline: none; /* Remove o contorno padrão */
+    border-color: #007bff;
+    outline: none;
 }
 
 option {
-    padding: 10px; /* Espaçamento interno para as opções */
+    padding: 10px;
 }
 
 
 
 button {
-    margin-top: 20px; /* Espaço acima do botão */
-    padding: 10px 15px; /* Espaço interno do botão */
-    background-color: #393939; /* Cor de fundo do botão */
-    color: white; /* Cor do texto */
-    border: none; /* Sem borda */
-    border-radius: 4px; /* Cantos arredondados do botão */
-    cursor: pointer; /* Muda o cursor ao passar o mouse */
-    transition: background-color 0.3s; /* Transição suave na mudança de cor */
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #393939;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #920000; /* Cor ao passar o mouse */
+    background-color: #920000;
 }
 
 .selected-genres {
-    margin-top: 10px; /* Espaço acima dos gêneros selecionados */
-    padding: 10px; /* Espaçamento interno */
-    background-color: #e0e0e0; /* Fundo levemente diferente */
-    border-radius: 4px; /* Cantos arredondados */
-    max-width: 50%; /* Máxima largura igual aos campos de entrada */
+    margin-top: 10px; 
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    max-width: 50%;
     display: flex;
-    flex-wrap: wrap; /* Permite que os gêneros se movam para a linha seguinte, se necessário */
+    flex-wrap: wrap;
 }
 
 .selected-genres span {
-    margin-right: 10px; /* Espaço entre os gêneros selecionados */
-    background-color: #ccc; /* Cor de fundo dos gêneros selecionados */
-    padding: 5px; /* Espaçamento interno dos gêneros */
-    border-radius: 4px; /* Cantos arredondados */
+    margin-right: 10px;
+    background-color: #ccc;
+    padding: 5px;
+    border-radius: 4px;
 }
 
 #genreError {
-    color: red; /* Cor vermelha para mensagens de erro */
-    margin-top: 10px; /* Espaço acima da mensagem de erro */
+    color: red; 
+    margin-top: 10px;
 }
 
 .required {
-    color: rgb(115, 8, 8); /* Cor vermelha para o asterisco */
+    color: rgb(115, 8, 8);
 }
 
 .optional {
-    color: blue; /* Cor azul para o texto opcional */
-    font-size: 0.9em; /* Tamanho da fonte menor para o texto opcional */
-    margin-left: 5px; /* Espaço à esquerda do texto opcional */
+    color: blue;
+    font-size: 0.9em; 
+    margin-left: 5px;
 }
 
 fieldset legend {
-    font-family: Georgia, serif; /* Define a fonte como Georgia */
-    font-size: 1.5em; /* Aumenta o tamanho da fonte */
-    font-weight: bold; /* Deixa o texto em negrito para mais destaque */
-    margin-bottom: 10px; /* Espaço abaixo do legend */
+    font-family: Georgia, serif; 
+    font-size: 1.5em; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
 }
 
 
