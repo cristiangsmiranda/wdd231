@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Library</title>
+    <meta name="description" content="library page">
+    <meta name="author" content="Cristian Miranda">
+    <meta property="og:title" content="A project page about a library">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cristiangsmiranda.github.io/wdd231/images/profile.webp">
+    <meta property="og:url" content="https://cristiangsmiranda.github.io/wdd231/site_project/discover.html">
+    <meta property="og:description" content="Your Library is an online library with the aim of making original works by aspiring authors popular. This site also allows you to become an author and venture into the world of books">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="images/welcome.webp" as="image">
+    <link rel="preload" href="styles/thanks.css" as="style">
+    <link rel="stylesheet" href="styles/thanks.css" media="print" onload="this.media='all'">
+    <link rel="preload" href="scripts/author.js" as="script">
+    <script src="scripts/author.js" defer></script>
+    <link rel="icon" href="library_favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <img src="images/your_library.webp" alt="Logo" loading="lazy" width="80">
+                <div>
+                    <h1>Your</h1>
+                    <h1>Library</h1>
+                </div>
+            </div>
+            <button id="menu" class="menu-button" aria-expanded="false" aria-controls="navigation" aria-label="Toggle navigation">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+            <nav class="navigation-home" id="navigation" role="navigation" aria-hidden="true">
+                <div class="box">
+                    <a href="your_library.html" tabindex="0">Home</a>
+                </div>
+                <div class="box">
+                    <a href="discover.html" tabindex="0">Discover</a>
+                </div>
+                <div class="box">
+                    <a href="author.html" tabindex="0">Become An Author</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="welcome">
+                <img src="images/welcome.webp" alt="Welcome" width="1200" loading="lazy" class="hero-image">
+                <h2 class="welcome-message1">Thank you for your effort.</h2>
+                <h3 class="welcome-message2">Your work will be evaluated by some of our editors, and if your work is approved, we will contact you within 90 days of the submission date.</h3>
+                <h5 class="welcome-message3">Please note: Keep an eye on the email. if you don't hear back within the time limit, don't be discouraged, keep trying. We'll be looking forward to helping you become a successful author!</h5>
+            </section>
+        </main> 
+        <footer>
+            <section class="information">
+                <p>Your Library</p>
+                <p>Address: St. Byfrost, Golden Kingdom, Asgard</p>
+                <p>Phone: +12 (34) 56789-1011</p>
+                <p>Email: YourLibrary@email.com</p>   
+            </section>
+            <nav class="sociallinks">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.webp" alt="Facebook" loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/in/cristian-gabriel-miranda-/">
+                    <img src="images/linkedin.webp" alt="Linkedin" loading="lazy">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram.webp" alt="Instagram" loading="lazy">
+                </a>
+            </nav>
+            <section class="footer">
+                <p>Your Library Project</p>
+                <p>Cristian G.S. Miranda</p>
+                <p>&copy; <span id="currentyear"></span> Your Library</p>
+                <p id="lastModified"></p>
+            </section>
+        </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuButton = document.getElementById("menu");
+                const navigation = document.getElementById("navigation");
+                menuButton.addEventListener("click", function () {
+                    const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+                    menuButton.setAttribute("aria-expanded", !isExpanded);
+                    menuButton.classList.toggle("active");
+                    navigation.classList.toggle("open");
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>

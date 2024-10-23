@@ -49,8 +49,8 @@
         </header>
         <main>
             <h2>Registration Form</h2>
+            <form method="GET" action="thanks.html" class="designOne">
             <form id="authorForm">
-                <!-- Personal Information Section -->
                 <fieldset>
                     <legend>Personal Information</legend>
                     <label for="fullName">Full Name:<span class="required">*</span></label>
@@ -66,7 +66,6 @@
                     <input type="number" id="age" name="age" required>
                 </fieldset>
         
-                <!-- Career Section -->
                 <fieldset>
                     <legend>Career</legend>
                     <label for="goal">What is your goal?<span class="required">*</span></label>
@@ -102,7 +101,6 @@
                     <input type="file" id="fileUpload" name="fileUpload" accept=".pdf,.docx" required>
                 </fieldset>
         
-                <!-- Optional Information Section -->
                 <fieldset>
                     <legend>Optional Information</legend>
                     <label for="aboutYou">Tell us more about yourself:<span class="optional">(Optional)</span></label>
@@ -113,16 +111,13 @@
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
-        
+                    
                     <label for="pseudonym">Enter your pseudonym:<span class="optional">(Optional)</span></label>
                     <input type="text" id="pseudonym" name="pseudonym">
                 </fieldset>
-        
                 <button type="submit">Submit</button>
             </form>
         </main>
-        
-               
         <footer>
             <section class="information">
                 <p>Your Library</p>
